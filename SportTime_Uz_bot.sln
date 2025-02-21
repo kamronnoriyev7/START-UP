@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35806.99
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportTimeUz", "SportTimeUz\SportTimeUz.csproj", "{B0B120F9-6004-4891-98AD-B8220C9AFE4D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportTimeUz.Server", "SportTimeUz\SportTimeUz.Server.csproj", "{B0B120F9-6004-4891-98AD-B8220C9AFE4D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportTime.BLL", "SportTime.BLL\SportTime.BLL.csproj", "{CDB05FF3-B4F9-4520-99E1-87E7C8FAA9FF}"
 EndProject

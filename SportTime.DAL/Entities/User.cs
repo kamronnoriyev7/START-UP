@@ -10,8 +10,9 @@ namespace SportTime.DAL.Entities
         public int? Number { get; set; }
         public string? Password { get; set; }
         public DateTime CreatedDate { get; set; }
-        public Stadium? Stadium { get; set; }
         public ICollection<Booking>? Bookings { get; set; }
+        public Dictionary<double, double>? Location { get; set; }
+
 
     }
 }

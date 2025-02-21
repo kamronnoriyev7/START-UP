@@ -13,6 +13,7 @@ namespace SportTime.DAL.Entities
         public string? Number { get; set; }
         public string? Password { get; set; }
         public string? Email { get; set; }
-        public Dictionary<double, double>? Location { get; set; }
+        public ICollection<Stadium>? Stadiums { get; set; } 
+        
     }
 }

@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SportTime.DAL.Entities
+﻿namespace SportTime.DAL.Entities
 {
-   public  class Booking
+    public class Booking
     {
+        public long Bookingid { get; set; }
+        public long UserId { get; set; }
+        public User? User { get; set; }
+        public long StadiumId { get; set; }
+        public Stadium? Stadium { get; set; }
+        public double Payment { get; set; }
+
 
     }
 }
