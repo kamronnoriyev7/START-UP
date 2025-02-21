@@ -8,6 +8,7 @@ namespace SportTime.DAL.Entities
 {
    public class Admin
     {
+        //hh
         public long AdminId { get; set; }
         public string? Name { get; set; }
         public string? Number { get; set; }
