@@ -11,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+//asdasd
 
 // Telegram bot xizmatini ishga tushirish
 var botService = app.Services.GetRequiredService<TelegramBotService>();
