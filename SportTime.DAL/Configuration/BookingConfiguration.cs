@@ -16,9 +16,8 @@ namespace SportTime.DAL.Configuration
             builder.ToTable("bookings");
             builder.HasKey(builder => builder.BookingId);
             builder.Property(b => b.BookingId).ValueGeneratedOnAdd();
-            builder.Property(b => b.Date).IsRequired();
-            builder.Property(b => b.Time).IsRequired();
-            builder.Property(b => b.Price).IsRequired();
+            builder.Property(b => b.DateTime).ValueGeneratedOnAdd();
+            builder.HasOne(p => p.Payment).WithOne(u => u.Bookings).HasForeignKey(p => p.BookingId);
             builder.HasOne(b => b.User).WithMany(u => u.Bookings).HasForeignKey(b => b.UserId);
             builder.HasOne(b => b.Stadium).WithMany(s => s.Bookings).HasForeignKey(b => b.StadiumId);
         }
