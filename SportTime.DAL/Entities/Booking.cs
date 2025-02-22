@@ -2,7 +2,7 @@
 {
     public class Booking
     {
-        public long Bookingid { get; set; }
+        public long BookingId { get; set; }
         public long UserId { get; set; }
         public User? User { get; set; }
         public long StadiumId { get; set; }
