@@ -22,7 +22,7 @@ namespace SportTime.DAL.Configuration
             builder.HasOne(p => p.User)
                .WithMany(u => u.Payments)
                .HasForeignKey(p => p.UserId)
-               .OnDelete(DeleteBehavior.Cascade); // Agar User o‘chirilsa, uning to‘lovlari ham o‘chiriladi
+               .OnDelete(DeleteBehavior.NoAction); // Agar User o‘chirilsa, uning to‘lovlari ham o‘chiriladi
         }
     }
 }

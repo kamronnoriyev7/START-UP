@@ -1,11 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using SportTime.DAL.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace SportTime.DAL.Configuration
 {
@@ -21,6 +17,13 @@ namespace SportTime.DAL.Configuration
             builder.Property(s => s.Address).IsRequired();
             builder.Property(s => s.Price).IsRequired();
             builder.HasMany(s => s.Bookings).WithOne(b => b.Stadium).HasForeignKey(b => b.StadiumId);
+            builder.Property(s => s.Location)
+            .HasConversion(
+                v => JsonSerializer.Serialize(v, (JsonSerializerOptions?)null), // JSONga o‘girish
+                v => JsonSerializer.Deserialize<GeoLocation>(v, (JsonSerializerOptions?)null) // JSONni obyektga aylantirish
+                )
+            .HasColumnType("nvarchar(max)"); // Ma’lumotlar bazasida JSON sifatida saqlanadi
+
         }
     }
 }

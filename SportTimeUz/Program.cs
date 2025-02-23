@@ -1,3 +1,4 @@
+using SportTimeUz;
 using YourNamespace.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,8 @@ builder.Services.AddSingleton<TelegramBotService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.ConfigureDataBase();
 
 var app = builder.Build();
 //asdasd

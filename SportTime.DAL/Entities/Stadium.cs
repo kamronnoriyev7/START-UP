@@ -1,4 +1,6 @@
-﻿namespace SportTime.DAL.Entities
+﻿using SportTime.DAL.Configuration;
+
+namespace SportTime.DAL.Entities
 {
     public class Stadium
     {
@@ -10,7 +12,7 @@
         public long AdminId { get; set; }
         public Admin? Admin { get; set; }
         public ICollection<Booking>? Bookings { get; set; }
-        public Dictionary<double, double>? Location { get; set; }
+        public GeoLocation? Location { get; set; } // Dictionary o‘rniga GeoLocation ishlatamiz
 
     }
 }

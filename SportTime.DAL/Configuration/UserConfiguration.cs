@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace SportTime.DAL.Configuration
@@ -22,6 +23,13 @@ namespace SportTime.DAL.Configuration
             builder.Property(b => b.CreatedDate).IsRequired();
             builder.HasMany(u => u.Bookings).WithOne(b => b.User).HasForeignKey(b => b.UserId);
             builder.HasMany(b => b.Payments).WithOne(b => b.User).HasForeignKey(b => b.UserId);
+            builder.Property(u => u.Location)
+               .HasConversion(
+                   v => JsonSerializer.Serialize(v, (JsonSerializerOptions?)null), // JSON formatga o‘girish
+                   v => JsonSerializer.Deserialize<GeoLocation>(v, (JsonSerializerOptions?)null) // JSON dan obyektga o‘girish
+               )
+               .HasColumnType("nvarchar(max)"); // Ma’lumotlar bazasida JSON sifatida saqlanadi
+
         }
     }
 }

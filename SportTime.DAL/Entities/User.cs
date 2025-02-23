@@ -12,6 +12,6 @@ namespace SportTime.DAL.Entities
         public DateTime CreatedDate { get; set; }
         public ICollection<Booking> Bookings { get; set; }
         public ICollection<Payment> Payments { get; set; }
-        public Dictionary<double, double>? Location { get; set; }
+        public GeoLocation? Location { get; set; }
     }
 }

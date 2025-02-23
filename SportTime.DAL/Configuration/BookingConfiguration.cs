@@ -14,13 +14,14 @@ namespace SportTime.DAL.Configuration
         public void Configure(EntityTypeBuilder<Booking> builder)
         {
             builder.ToTable("bookings");
-            builder.HasKey(builder => builder.BookingId);
-            builder.Property(b => b.BookingId).ValueGeneratedOnAdd();
-            builder.Property(b => b.DateTime).IsRequired();
-            builder.Property(b => b.UserId).IsRequired();
-            builder.Property(b => b.StadiumId).IsRequired();
-            builder.Property(b => b.AdminId).IsRequired();
-            builder.HasOne(b => b.Payment).WithOne(s => s.Booking);
+
+            builder.HasKey(b => b.BookingId);
+
+            builder.HasOne(b => b.Stadium)
+                   .WithMany(s => s.Bookings)
+                   .HasForeignKey(b => b.StadiumId)
+                   .OnDelete(DeleteBehavior.NoAction); // ❌ Cascade Delete o‘rniga NoAction
+
         }
     }
 }
