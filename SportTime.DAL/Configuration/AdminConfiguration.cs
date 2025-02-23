@@ -21,6 +21,7 @@ namespace SportTime.DAL.Configuration
             builder.Property(a => a.Password).IsRequired().HasMaxLength(30);
             builder.Property(a => a.Email).IsRequired().HasMaxLength(30);
             builder.HasMany(a => a.Stadiums).WithOne(s => s.Admin).HasForeignKey(s => s.AdminId);
+            builder.HasMany(b => b.Bookings).WithOne(b => b.Admin).HasForeignKey(b => b.AdminId);
         }
     }
 }

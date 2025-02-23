@@ -9,8 +9,10 @@ namespace SportTime.DAL.Entities
         public User? User { get; set; }
         public long StadiumId { get; set; }
         public Stadium? Stadium { get; set; }
-        public double Payment { get; set; }
-        public DataSetDateTime? DateTime { get; set; }
-
+        public long AdminId { get; set; }
+        public Admin? Admin { get; set; }
+        //public double Payment { get; set; }
+        public DateTime? DateTime { get; set; }
+        public Payment? Payment { get; set; }
     }
 }

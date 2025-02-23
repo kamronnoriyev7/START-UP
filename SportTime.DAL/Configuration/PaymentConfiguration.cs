@@ -17,7 +17,12 @@ namespace SportTime.DAL.Configuration
             builder.HasKey(builder => builder.PaymentId);
             builder.Property(x => x.PaymentId).ValueGeneratedOnAdd();
             builder.Property(x => x.Price).IsRequired();
-            builder.
+            builder.Property(b => b.CreatedDate).IsRequired();
+            builder.Property(b => b.PaymentStatus).IsRequired();
+            builder.HasOne(p => p.User)
+               .WithMany(u => u.Payments)
+               .HasForeignKey(p => p.UserId)
+               .OnDelete(DeleteBehavior.Cascade); // Agar User o‘chirilsa, uning to‘lovlari ham o‘chiriladi
         }
     }
 }

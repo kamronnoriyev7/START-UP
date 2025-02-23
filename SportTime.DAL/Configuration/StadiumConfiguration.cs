@@ -21,7 +21,6 @@ namespace SportTime.DAL.Configuration
             builder.Property(s => s.Address).IsRequired();
             builder.Property(s => s.Price).IsRequired();
             builder.HasMany(s => s.Bookings).WithOne(b => b.Stadium).HasForeignKey(b => b.StadiumId);
-            builder.HasOne(s => s.Admin).WithMany(a => a.Stadiums).HasForeignKey(s => s.AdminId);
         }
     }
 }

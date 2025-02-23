@@ -1,13 +1,8 @@
 ﻿using SportTime.DAL.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SportTime.DAL.Entities
 {
-   public class Payment
+    public class Payment
     {
         public long PaymentId { get; set; }
         public DateTime CreatedDate { get; set; }
