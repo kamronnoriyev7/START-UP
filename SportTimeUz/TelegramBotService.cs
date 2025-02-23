@@ -17,6 +17,7 @@ public class TelegramBotService
         _botClient = new TelegramBotClient("8013798090:AAG6PywkTd1TFbV3ksVXjmUnql7YzctpCS4");
         LoadAdmins();
 
+
         var cts = new CancellationTokenSource();
         var receiverOptions = new ReceiverOptions
         {
