@@ -14,9 +14,9 @@ namespace SportTime.DAL
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Admin> Admins { get; set; }
-        public DbSet<Payment> Payment { get; set; }
-
-
+        public DbSet<Payment> Payments { get; set; }
+        public DbSet<Booking> Bookings { get; set; }
+        public DbSet<Stadium> Stadiums { get; set; }
 
 
 
