@@ -21,11 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\SportTime.DAL\SportTime.DAL.csproj" />
+    <ProjectReference Include="..\SportTime.BLL\SportTime.BLL.csproj" />
   </ItemGroup>
 
 </Project>

@@ -18,7 +18,7 @@ namespace SportTime.DAL.Configuration
             builder.HasKey(builder => builder.UserId);
             builder.Property(u => u.UserId).ValueGeneratedOnAdd();
             builder.Property(u => u.Name).IsRequired().HasMaxLength(30);
-            builder.Property(u => u.Number).IsRequired().HasMaxLength(9);
+            builder.Property(u => u.PhoneNumber).IsRequired().HasMaxLength(9);
             builder.Property(u => u.Password).IsRequired().HasMaxLength(30);
             builder.Property(b => b.CreatedDate).IsRequired();
             builder.HasMany(u => u.Bookings).WithOne(b => b.User).HasForeignKey(b => b.UserId);

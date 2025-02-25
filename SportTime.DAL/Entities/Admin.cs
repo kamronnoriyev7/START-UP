@@ -8,5 +8,5 @@ public class Admin
     public string? Password { get; set; }
     public string? Email { get; set; }
     public ICollection<Stadium>? Stadiums { get; set; }
-    public ICollection<Booking> Bookings { get; set; }
+    public ICollection<Booking>? Bookings { get; set; }
 }

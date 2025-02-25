@@ -19,4 +19,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SportTime.Repository\SportTime.Repository.csproj" />
+  </ItemGroup>
+
 </Project>

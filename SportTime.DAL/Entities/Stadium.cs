@@ -12,7 +12,7 @@ namespace SportTime.DAL.Entities
         public long AdminId { get; set; }
         public Admin? Admin { get; set; }
         public ICollection<Booking>? Bookings { get; set; }
-        public GeoLocation? Location { get; set; } // Dictionary o‘rniga GeoLocation ishlatamiz
+        public GeoLocation? Location { get; set; } 
 
     }
 }

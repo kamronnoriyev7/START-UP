@@ -12,8 +12,8 @@ using SportTime.DAL;
 namespace SportTime.DAL.Migrations
 {
     [DbContext(typeof(MainContext))]
-    [Migration("20250223103600_initialCreation")]
-    partial class initialCreation
+    [Migration("20250223114751_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
